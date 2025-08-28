@@ -1,13 +1,13 @@
 import { DashboardStats } from '../types';
-import { demoApiService } from './demoApiService';
+import { apiService } from './apiService';
 
 class DashboardService {
   async getGuruStats(kelasId?: string) {
-    return demoApiService.getGuruStats(kelasId);
+    return apiService.getGuruStats(kelasId);
   }
 
   async getSiswaStats(siswaId: string) {
-    return demoApiService.getSiswaStats(siswaId);
+    return apiService.getSiswaStats(siswaId);
   }
 }
 
