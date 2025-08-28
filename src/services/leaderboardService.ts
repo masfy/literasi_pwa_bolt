@@ -6,5 +6,4 @@ class LeaderboardService {
     return apiService.getLeaderboardByKelas(kelasId);
   }
 }
-
 export const leaderboardService = new LeaderboardService();
