@@ -2,6 +2,9 @@ import { ApiResponse } from '../types';
 
 const API_BASE_URL = 'https://script.google.com/macros/s/YOUR_DEPLOYMENT_ID/exec';
 
+// IMPORTANT: Ganti YOUR_DEPLOYMENT_ID dengan ID deployment Apps Script Anda
+// Contoh: https://script.google.com/macros/s/AKfycbx.../exec
+
 class ApiService {
   private getHeaders(): HeadersInit {
     const token = localStorage.getItem('lentera_token');
@@ -16,8 +19,10 @@ class ApiService {
     options: RequestInit = {}
   ): Promise<ApiResponse<T>> {
     try {
-      const url = `${API_BASE_URL}${endpoint}`;
+      // Format URL untuk Apps Script dengan parameter path
+      const url = `${API_BASE_URL}?path=${encodeURIComponent(endpoint)}`;
       const response = await fetch(url, {
+        method: options.method || 'GET',
         headers: this.getHeaders(),
         ...options,
       });
@@ -44,21 +49,21 @@ class ApiService {
   async post<T>(endpoint: string, data?: any): Promise<ApiResponse<T>> {
     return this.request<T>(endpoint, {
       method: 'POST',
-      body: data ? JSON.stringify(data) : undefined,
+      body: JSON.stringify(data || {}),
     });
   }
 
   async put<T>(endpoint: string, data?: any): Promise<ApiResponse<T>> {
     return this.request<T>(endpoint, {
       method: 'PUT',
-      body: data ? JSON.stringify(data) : undefined,
+      body: JSON.stringify(data || {}),
     });
   }
 
   async patch<T>(endpoint: string, data?: any): Promise<ApiResponse<T>> {
     return this.request<T>(endpoint, {
       method: 'PATCH',
-      body: data ? JSON.stringify(data) : undefined,
+      body: JSON.stringify(data || {}),
     });
   }
 
