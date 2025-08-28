@@ -26,5 +26,4 @@ class AktivitasService {
     return apiService.getAllAktivitas(filters);
   }
 }
-
 export const aktivitasService = new AktivitasService();
