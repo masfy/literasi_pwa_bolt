@@ -10,5 +10,4 @@ class DashboardService {
     return apiService.getSiswaStats(siswaId);
   }
 }
-
 export const dashboardService = new DashboardService();
