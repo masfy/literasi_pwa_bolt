@@ -1,6 +1,6 @@
 # API Endpoints Documentation - Lentera
 
-Base URL: `https://script.google.com/macros/s/YOUR_DEPLOYMENT_ID/exec`
+Base URL: `https://script.google.com/macros/s/AKfycbygviE1BN2wUWUbHIjxehKlij-aAM2ggkhZ6XHX-46ZbYN9-o3MUQg2e5DS7UpzN6mx/exec`
 
 ## Authentication
 
