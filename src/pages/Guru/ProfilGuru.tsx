@@ -6,6 +6,7 @@ import Card from '../../components/UI/Card';
 import Button from '../../components/UI/Button';
 import Input from '../../components/UI/Input';
 import { validateEmail } from '../../utils/validationUtils';
+import { formatDate } from '../../utils/dateUtils';
 
 const ProfilGuru: React.FC = () => {
   const { user } = useAuth();
