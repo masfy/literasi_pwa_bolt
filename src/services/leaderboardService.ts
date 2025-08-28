@@ -1,9 +1,9 @@
 import { LeaderboardEntry } from '../types';
-import { demoApiService } from './demoApiService';
+import { apiService } from './apiService';
 
 class LeaderboardService {
   async getByKelas(kelasId: string) {
-    return demoApiService.getLeaderboardByKelas(kelasId);
+    return apiService.getLeaderboardByKelas(kelasId);
   }
 }
 
