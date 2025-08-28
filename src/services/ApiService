@@ -4,7 +4,7 @@ import { sampleUsers, sampleKelas, sampleLevels, sampleAktivitas } from '../data
 import { calculateLevel } from '../utils/levelUtils';
 import { calculatePoin } from '../utils/pointUtils';
 
-class DemoApiService {
+class ApiService {
   private users: User[] = [...sampleUsers];
   private kelas: Kelas[] = [...sampleKelas];
   private aktivitas: Aktivitas[] = [...sampleAktivitas];
@@ -338,4 +338,4 @@ class DemoApiService {
   }
 }
 
-export const demoApiService = new DemoApiService();
+export const ApiService = new ApiService();
