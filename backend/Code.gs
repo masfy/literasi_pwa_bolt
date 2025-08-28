@@ -11,7 +11,7 @@
  */
 
 // Configuration
-const SPREADSHEET_ID = 'YOUR_SPREADSHEET_ID'; // Ganti dengan ID spreadsheet Anda
+const SPREADSHEET_ID = '1osqhI1ruTQ80PwX1g_3bc34Rb86FqLmzA0Lzzez8wWU'; // Ganti dengan ID spreadsheet Anda
 const JWT_SECRET = 'lentera-secret-key-2024'; // Ganti dengan secret key yang aman
 
 // Helper Functions
