@@ -18,5 +18,4 @@ class LevelService {
     return apiService.deleteLevel(id);
   }
 }
-
 export const levelService = new LevelService();
