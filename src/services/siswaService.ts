@@ -1,25 +1,25 @@
 import { User } from '../types';
-import { demoApiService } from './demoApiService';
+import { apiService } from './apiService';
 
 class SiswaService {
   async getByKelas(kelasId: string) {
-    return demoApiService.getSiswaByKelas(kelasId);
+    return apiService.getSiswaByKelas(kelasId);
   }
 
   async create(siswa: Omit<User, 'id' | 'created_at' | 'updated_at'>) {
-    return demoApiService.createSiswa(siswa);
+    return apiService.createSiswa(siswa);
   }
 
   async update(id: string, siswa: Partial<User>) {
-    return demoApiService.updateSiswa(id, siswa);
+    return apiService.updateSiswa(id, siswa);
   }
 
   async resetPassword(id: string) {
-    return demoApiService.resetPasswordSiswa(id);
+    return apiService.resetPasswordSiswa(id);
   }
 
   async toggleActive(id: string, aktif: boolean) {
-    return demoApiService.toggleActiveSiswa(id, aktif);
+    return apiService.toggleActiveSiswa(id, aktif);
   }
 }
 
