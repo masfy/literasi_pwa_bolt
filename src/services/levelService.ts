@@ -1,21 +1,21 @@
 import { Level } from '../types';
-import { demoApiService } from './demoApiService';
+import { apiService } from './apiService';
 
 class LevelService {
   async getAll() {
-    return demoApiService.getAllLevels();
+    return apiService.getAllLevels();
   }
 
   async create(level: Omit<Level, 'id'>) {
-    return demoApiService.createLevel(level);
+    return apiService.createLevel(level);
   }
 
   async update(id: string, level: Partial<Level>) {
-    return demoApiService.updateLevel(id, level);
+    return apiService.updateLevel(id, level);
   }
 
   async delete(id: string) {
-    return demoApiService.deleteLevel(id);
+    return apiService.deleteLevel(id);
   }
 }
 
