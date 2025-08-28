@@ -1,9 +1,9 @@
 import { Kelas } from '../types';
-import { demoApiService } from './demoApiService';
+import { apiService } from './apiService';
 
 class KelasService {
   async getAll() {
-    return demoApiService.getAllKelas();
+    return apiService.getAllKelas();
   }
 
   async getById(id: string) {
@@ -12,15 +12,15 @@ class KelasService {
   }
 
   async create(kelas: Omit<Kelas, 'id' | 'created_at' | 'updated_at'>) {
-    return demoApiService.createKelas(kelas);
+    return apiService.createKelas(kelas);
   }
 
   async update(id: string, kelas: Partial<Kelas>) {
-    return demoApiService.updateKelas(id, kelas);
+    return apiService.updateKelas(id, kelas);
   }
 
   async delete(id: string) {
-    return demoApiService.deleteKelas(id);
+    return apiService.deleteKelas(id);
   }
 
   async getMySiswaKelas() {
