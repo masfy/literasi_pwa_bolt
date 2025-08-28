@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { BookOpen, Award, CheckCircle, Clock, XCircle, TrendingUp, Target, Lightbulb } from 'lucide-react';
+import { BookOpen, Award, CheckCircle, Clock, XCircle, TrendingUp, Target, Lightbulb, Trophy } from 'lucide-react';
 import { useAuth } from '../../contexts/AuthContext';
 import { useNotification } from '../../contexts/NotificationContext';
 import { dashboardService } from '../../services/dashboardService';
