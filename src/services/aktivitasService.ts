@@ -1,5 +1,5 @@
 import { Aktivitas } from '../types';
-import { ApiService } from './ApiService';
+import { apiService } from './apiService';
 
 interface AktivitasFilter {
   status?: string;
@@ -11,19 +11,19 @@ interface AktivitasFilter {
 
 class AktivitasService {
   async getAll(filters: AktivitasFilter = {}) {
-    return ApiService.getAllAktivitas(filters);
+    return apiService.getAllAktivitas(filters);
   }
 
   async create(aktivitas: Omit<Aktivitas, 'id' | 'status' | 'poin' | 'created_at' | 'updated_at'>) {
-    return ApiService.createAktivitas(aktivitas);
+    return apiService.createAktivitas(aktivitas);
   }
 
   async verify(id: string, status: 'Disetujui' | 'Ditolak', catatan?: string) {
-    return ApiService.verifyAktivitas(id, status, catatan);
+    return apiService.verifyAktivitas(id, status, catatan);
   }
 
   async getRekap(filters: AktivitasFilter = {}) {
-    return ApiService.getAllAktivitas(filters);
+    return apiService.getAllAktivitas(filters);
   }
 }
 
