@@ -1,6 +1,6 @@
 import { ApiResponse } from '../types';
 
-const API_BASE_URL = 'https://script.google.com/macros/s/AKfycbygviE1BN2wUWUbHIjxehKlij-aAM2ggkhZ6XHX-46ZbYN9-o3MUQg2e5DS7UpzN6mx/exec';
+const API_BASE_URL = 'https://script.google.com/macros/s/AKfycby4QJ9mVQQBrbXXfpRdcUuvcVrKzZpo8KSaIB36fpPhtdhD92melazWvtzoFVw0D7LO/exec';
 
 // IMPORTANT: Ganti YOUR_DEPLOYMENT_ID dengan ID deployment Apps Script Anda
 // Contoh: https://script.google.com/macros/s/AKfycbx.../exec
